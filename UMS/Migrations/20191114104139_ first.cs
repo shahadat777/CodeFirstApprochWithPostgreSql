@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace UMS.Migrations
 {
@@ -12,11 +13,11 @@ namespace UMS.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    StudentName = table.Column<string>(nullable: false),
-                    RegNo = table.Column<string>(nullable: false),
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
+                    StudentName = table.Column<string>(nullable: true),
+                    RegNo = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
-                    DepartmentName = table.Column<string>(nullable: false)
+                    DepartmentName = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

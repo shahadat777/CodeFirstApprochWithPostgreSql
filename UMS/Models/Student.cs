@@ -2,26 +2,27 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace UMS.Models
 {
     public class Student
-
-    { 
-         
+        
+    {
+      
         public int  Id{ get; set; }
-        [Display(Name = "Student Name")]
-        [Required]
+       
+
         public string  StudentName{ get; set; }
-        [Display(Name = "Reg No")]
-        [Required]
+      
+        
         public string  RegNo{ get; set; }
-        [EmailAddress]
+     
         public string  Email{ get; set; }
-        [Display(Name = "Department Name")]
-        [Required]
+
+       
         public string  DepartmentName{ get; set; }
 
 
